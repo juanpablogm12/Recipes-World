@@ -44,12 +44,12 @@ const getRecipeById = async (id, source) => {
 
 const searchRecipeByTitle = async (title) => {
   const databaseRecipes = await Recipe.findAll();
-  const databaseFilter = databaseRecipes.filter((e) =>
-    e.title.toLowerCase().includes(title.toLowerCase())
+  const databaseFilter = databaseRecipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(title.toLowerCase())
   );
   const apiRecipes = (
     await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
     )
   ).data.results;
   const apiRecipesClean = cleanApi(apiRecipes).filter((e) =>

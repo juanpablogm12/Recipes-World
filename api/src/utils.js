@@ -6,6 +6,7 @@ api.map((e) => {
     id: e.id,
     title: e.title,
     image: e.image,
+    healthScore: e.healthScore,
     diets: e.diets,
   };
 });
@@ -23,6 +24,7 @@ bd.map((e) => {
     id: e.id,
     title: e.title,
     image: e.image,
+    healthScore: e.healthScore,
     diets: e.Diets.map((e) => e.name),
   };
 });
@@ -37,7 +39,7 @@ return {
   healthScore: obj.healthScore,
   steps: obj.analyzedInstructions[0].steps.map(
     (e, index) => `step ${index + 1}. ${e.step}`
-  )[0],
+  )
 };
 };
 
@@ -47,7 +49,7 @@ return {
   title: obj.title,
   image: obj.image,
   healthScore: obj.healthScore,
-  sumary: obj.summary,
+  summary: obj.summary,
   steps: obj.steps,
   diets: obj.Diets.map((e) => e.name),
 };

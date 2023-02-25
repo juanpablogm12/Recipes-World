@@ -1,0 +1,31 @@
+.detail_container {
+    margin: 15px;
+    background-color: #222233;
+    display: flex; 
+    text-align: justify;
+    padding: 15px;
+    color: #777788;
+}
+
+.detail_image {
+    border-radius: 6px;
+    width: 450px;
+    height: auto;
+}
+
+.detail_diets_score_container {
+    display: flex;
+
+}
+.detail_info_container {
+    padding: 10px;
+}
+
+.detail_container h3 {
+    color: #ff6944;
+    margin-right: 5px;
+}
+
+.detail_summary{
+    display: inline;
+}
