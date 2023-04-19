@@ -8,7 +8,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4em;
-    width: 70%;
-    padding: 30px 250px;
+    padding: 30px;
     justify-content: center;
 }

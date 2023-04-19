@@ -67,7 +67,7 @@ const Form = () => {
     steps: "",
   });
 
-  const [button, setButton] = useState(true);
+
 
   const changeHandler = (event) => {
     const property = event.target.name;
@@ -76,8 +76,7 @@ const Form = () => {
     setError(validate({ ...form, [property]: value }));
   };
 
-  const disbledHandler = () => {
-  }
+
 
   const checkboxChangeHandler = (event) => {
     const value = event.target.value;
@@ -196,15 +195,9 @@ const Form = () => {
               })}
           </div>
         </fieldset>
-        {button ? (
-          <button disabled className={style.form_button} type="submit">
-            SUBMIT
-          </button>
-        ) : (
           <button className={style.form_button} type="submit">
             SUBMIT
           </button>
-        )}
       </form>
     </div>
   );
